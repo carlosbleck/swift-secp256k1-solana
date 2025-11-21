@@ -40,6 +40,10 @@ let package = Package(
                 "secp256k1/src/bench.h",
                 "secp256k1/src/modules/ecdh/tests_impl.h",
                 "secp256k1/src/modules/recovery/tests_impl.h",
+                
+                "secp256k1/src",
+                "secp256k1/src/modules",
+                "secp256k1/*.c",
 
                 "exporter"
             ],
@@ -60,6 +64,11 @@ let package = Package(
             name: "secp256k1_solana",
             dependencies: ["Csecp256k1_solana"],
             path: "./secp256k1/Classes/exporter",
-            sources: ["."])
+            sources: ["."]),
+        .testTarget(
+            name: "secp256k1_solanaTests",
+            dependencies: ["secp256k1_solana", "Csecp256k1_solana"],
+            path: "Tests/secp256k1_solanaTests"
+        )
     ]
 )
