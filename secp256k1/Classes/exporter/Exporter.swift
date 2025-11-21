@@ -1,1 +1,1 @@
-@_exported import libsecp256k1
+@_exported import Csecp256k1_solana
