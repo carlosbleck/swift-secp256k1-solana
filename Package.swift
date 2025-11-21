@@ -42,8 +42,16 @@ let package = Package(
                 "secp256k1/src/modules/recovery/tests_impl.h",
                 
                 "secp256k1/src",
+                "secp256k1/src/include",
                 "secp256k1/src/modules",
+                "secp256k1/build-aux",
+                "secp256k1/obj",
+                "secp256k1/sage",
+                "secp256k1/java",
+                "secp256k1/benchmarks",
+                "secp256k1/tests",
                 "secp256k1/*.c",
+                "secp256k1/*.h",
 
                 "exporter"
             ],
